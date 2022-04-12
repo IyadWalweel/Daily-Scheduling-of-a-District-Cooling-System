@@ -1,0 +1,53 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: Celine
+ * Creation Date: 12 oct. 2020 at 14:24:21
+ *********************************************/
+
+
+//STANDARD CHILLERS
+// Number of production levels
+LS = 2 ;
+// Production range 
+//Cmin[s] = minimum output power of a standard chiller of level s
+//Cmax[s] = minimum output power of a standard chiller of level s
+ Cmin = [500, 800];
+ Cmax = [5000, 8800 ];
+ // Performance curves 
+ // Electric power consumed by a chiller of level s = a[s] * Output Cooling Power + b[s] when turned on, 0 otherwise
+ a = [0.15  , 0.125];
+ b=  [50  , 300];
+ // Number of chillers in each production level
+ NS = [2,5]; 
+ 
+ // ICE CHILLERS
+ // Number of types of ice chillers
+LI = 1 ; 
+// Production range - cooling power
+Gammamin_cold = [500];
+Gammamax_cold =[5000]; 
+// Production range - ice
+Gammamin_ice = [350 ];
+Gammamax_ice = [3500 ];
+// Performance curves - electricity consumption as a function of the cooling power produced
+ alpha_cold= [0.16]; 
+ beta_cold= [80] ;    
+ // Performance curves - electricity consumption as a function of the ice produced
+ alpha_ice= [0.06]; 
+ beta_ice= [600] ;  
+ // Number of ice chillers of each type available
+NI = [1] ;   
+ 
+ // STORAGE TANK
+ // Ice storage tank capacity
+ IceStoCap =24000;   
+         
+
+ // Demand for cooling power for hours 0 to 23
+ 
+ D= [30000,28000,25000,23000,22000,20000,   19000, 25000, 30000, 32000, 40000, 48000,   50000, 49000, 50000, 50000, 48000, 45000,   42000, 40000, 39000, 37000, 35000, 32000    ];
+ 
+ // Electricity price for hours 0 to 23
+ EP= [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3,      0.5, 0.5, 0.5,    0.9, 0.9,   0.5, 0.5, 0.5, 0.5,   0.9,0.9,0.9, 0.9, 0.9, 0.9,  0.5, 0.3];
+ 
+ 

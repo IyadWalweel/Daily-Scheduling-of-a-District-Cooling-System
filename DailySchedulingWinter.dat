@@ -1,0 +1,26 @@
+/*********************************************
+ * OPL 12.8.0.0 Data
+ * Author: Celine
+ * Creation Date: 12 oct. 2020 at 13:42:34
+ *********************************************/
+
+//STANDARD CHILLERS
+// Number of production levels
+LS = 2 ;
+// Production range 
+//Cmin[s] = minimum output power of a standard chiller of level s
+//Cmax[s] = minimum output power of a standard chiller of level s
+ Cmin = [500, 800];
+ Cmax = [5000, 8800 ];
+ // Performance curves 
+ // Electric power consumed by a chiller of level s = a[s] * Output Cooling Power + b[s] when turned on, 0 otherwise
+ a = [0.15  , 0.125];
+ b=  [50  , 300];
+ // Number of chillers in each production level
+ NS = [1,1]; 
+ 
+ // Demande for cooling power for hours h=0..23
+ D= [0,0,0,0,0,0, 500,3000, 5000, 6000, 6500, 8000,     12000, 12000, 13000, 13000, 13000, 11000,    9000, 5000, 2000, 600, 0, 0 ];
+ 
+ // Electricity price  for hours h=0..23
+ EP= [0.3, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3,      0.5, 0.5, 0.5,    0.9, 0.9,   0.5, 0.5, 0.5, 0.5,   0.9,0.9,0.9, 0.9, 0.9, 0.9,  0.5, 0.3];
