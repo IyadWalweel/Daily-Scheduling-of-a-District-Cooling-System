@@ -1,5 +1,8 @@
 # Daily Scheduling of a District Cooling System
-#### Supervised by: Mrs. Céline Gicquel
+#### Supervised by: Mrs. Céline Gicquel.
+#### Course: Introduction to Operational Research and Combinatorics.
+#### Software: CPLEX Studio IDE 12.8.0
+
 This project is based on the ongoing work of Bingqian Liu, Ph.D. student at EDF R&D China.
 
 ## Introduction 
